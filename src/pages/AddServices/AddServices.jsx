@@ -9,7 +9,6 @@ const AddServices = () => {
         const serviceType=form.serviceType.value 
         const productDescription=form.productDescription.value 
         const addService={serviceName,servicePrice,photoURL,serviceType,productDescription}
-        console.log(addService)
 
         fetch("http://localhost:3000/service",{
             method:'POST',

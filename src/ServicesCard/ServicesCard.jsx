@@ -1,8 +1,18 @@
 import { AiFillEdit, AiFillDelete } from "react-icons/ai"
 
 const ServicesCard = ({ data }) => {
-    console.log(data);
-    const { photoURL, serviceName, servicePrice } = data || {}
+    const { photoURL, serviceName, servicePrice , _id ,deleteService } = data || {}
+    const handleDelete=(_id)=>{
+        console.log('delete done',_id);
+        fetch(`http://localhost:3000/service/${_id}`,{
+            method:'DELETE'
+        })
+        .then(res=>res.json())
+        .then(data=>{
+            console.log(data);
+            deleteService(_id)
+        })
+    }
     return (
         <div>
 
@@ -24,7 +34,7 @@ const ServicesCard = ({ data }) => {
                         <AiFillEdit />
                     </div>
 
-                    <div className="text-xl" >
+                    <div onClick={()=>handleDelete(_id)} className="text-xl" >
                         <AiFillDelete />
                     </div>
                 </div>
