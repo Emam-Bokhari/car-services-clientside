@@ -10,7 +10,7 @@ const AddServices = () => {
         const productDescription=form.productDescription.value 
         const addService={serviceName,servicePrice,photoURL,serviceType,productDescription}
 
-        fetch("http://localhost:3000/service",{
+        fetch("https://car-service-serverside-itmy8fuwh-moshfiqur-rahmans-projects.vercel.app/service",{
             method:'POST',
             headers:{
                 'content-type':'application/json'

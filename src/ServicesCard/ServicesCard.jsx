@@ -4,7 +4,7 @@ const ServicesCard = ({ data }) => {
     const { photoURL, serviceName, servicePrice , _id ,deleteService } = data || {}
     const handleDelete=(_id)=>{
         console.log('delete done',_id);
-        fetch(`http://localhost:3000/service/${_id}`,{
+        fetch(`https://car-service-serverside-itmy8fuwh-moshfiqur-rahmans-projects.vercel.app/service/${_id}`,{
             method:'DELETE'
         })
         .then(res=>res.json())

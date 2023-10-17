@@ -10,7 +10,7 @@ const Router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                loader:()=>fetch("http://localhost:3000/service"),
+                loader:()=>fetch("https://car-service-serverside-itmy8fuwh-moshfiqur-rahmans-projects.vercel.app/service"),
                 element: <Home />
             },
             {
